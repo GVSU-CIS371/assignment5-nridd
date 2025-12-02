@@ -19,6 +19,6 @@ const beverageStore = useBeverageStore();
   bottom: 0;
   animation: pour-tea 2s;
   z-index: 300;
-  /* // border-radius: 0.05em 0.05em 2.2em 2.2em; */
+  border-radius: 0.05em 0.05em 2.2em 2.2em; 
 }
 </style>
