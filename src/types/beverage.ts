@@ -1,28 +1,29 @@
-interface BaseBeverageType {
+// src/types/beverage.ts
+
+export interface BaseBeverageType {
   id: string;
   name: string;
   color: string;
 }
 
-interface CreamerType {
+export interface CreamerType {
   id: string;
   name: string;
   color: string;
 }
 
-interface SyrupType {
+export interface SyrupType {
   id: string;
   name: string;
   color: string;
 }
 
-type BeverageType = {
-  id: string;
-  uid: string;
+export type BeverageType = {
+  id: string;                 // Firestore document id
+  uid: string;                // Firebase user id (owner)
   name: string;
-  temp: string;
+  temperature: string;        // e.g. "hot", "cold"
   base: BaseBeverageType;
   syrup: SyrupType;
   creamer: CreamerType;
 };
-export type { BaseBeverageType, CreamerType, SyrupType, BeverageType };
